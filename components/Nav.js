@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-// import MediaQuery from "react-responsive";
 import { useCartContext } from "@/context/Store";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import Logo from "@/components/Logo";
 import Bag from "@/components/Bag";
 
