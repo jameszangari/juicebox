@@ -16,9 +16,7 @@ function Nav() {
     setCartItems(numItems);
   }, [cart]);
 
-  // const [toggle, setToggle] = useState(null);
   const [toggleMenu, setToggleMenu] = useState(null);
-  // const [open, setOpen] = useState(false);
 
   const disableScroll = () => {
     document.querySelectorAll("html").forEach((node) => {
