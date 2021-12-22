@@ -1,12 +1,8 @@
-import StoreHeading from "@/components/StoreHeading";
 import Typewriter from "typewriter-effect";
 import Link from "next/dist/client/link";
 
 function IndexPage({ products }) {
   return (
-    // <div className="mx-auto max-w-6xl">
-    //   <StoreHeading />
-    // </div>
     <div className="typewriter">
       <div className="typewriter__left">
         <h1 className="text-4xl">Age is just a number</h1>
