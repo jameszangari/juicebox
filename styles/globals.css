@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.triangle {
+}
+
+.triangle::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0em;
+  border: 1em solid transparent;
+  border-left-color: #ffffff;
+}
+
+/*.xp-btn {
+  font-family: 'Montserrat' !important;
+  text-transform: uppercase;
+  border: 2px solid !important;
+  border-bottom-color: #444 !important;
+  border-right-color: #444 !important;
+  border-left-color: #a6a6a6 !important;
+  border-top-color: #a6a6a6 !important;
+  background-color: #bfbfbf !important;
+  color: #000 !important;
+  line-height: 1 !important;
+  padding: 10px !important;
+  /~ height: 15px !important; ~/
+  /~ width: 15px !important; ~/
+}*/
+
+/*.xp-button {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  background: #c0c0c0;
+  box-shadow: inset -1px -1px 0 0 #0a0a0a, inset 1px 1px 0 0 #fff, inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #dfdfdf;
+  /~ box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde; ~/
+  padding: 0 6px 1px;
+  /~ font-size: 24px; ~/
+  /~ background: silver !important;
+  box-shadow: inset -1px -1px #0a0a0a !important,inset 1px 1px #fff !important,inset -2px -2px grey !important,inset 2px 2px #dfdfdf !important; ~/
+}*/
+
+.xp-bg {
+  border: 2px solid;
+  border-bottom-color: #535353 !important;
+  border-right-color: #535353 !important;
+  border-left-color: #dbdbdb !important;
+  border-top-color: #dbdbdb !important;
+  background-color: #bfbfbf !important;
+}
+.xp-card {
+  border-top: solid 2px #dbdbdb;
+  border-left: solid 2px #dbdbdb;
+  border-right: solid 2px #535353;
+  border-bottom: solid 2px #535353;
+  background: #bfbfbf;
+}
+/* .product-card-window {
+  border-top: solid 3px #f0f0f0;
+  border-left: solid 3px #f0f0f0;
+  border-right: solid 3px #909090;
+  border-bottom: solid 3px #909090;
+  background: #c0c0be;
+} */
+.o-logo {
+  width: 150px;
+  height: 36px;
+}
+.o-logo__link {
+  width: 150px;
+  height: 36px;
+  background-color: transparent;
+}
+.o-cart {
+  width: 24px;
+  height: 30px;
+}
+.jb-bag-text {
+  display: inline-block;
+}
+@media screen and (max-width: 576px) {
+  .jb-bag-text {
+    display: none;
+  }
+}
+.typewriter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  min-height: calc(100vh - 138px);
+  max-width: 1240px;
+  padding: 0 10%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+  .typewriter {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .typewriter__left h1 {
+    font-size: 36px;
+  }
+  .typewriter__right {
+    margin-top: 50px;
+  }
+}
+.typewriter__left h1 {
+  font-family: "Corben", sans-serif;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.typewriter__leftType {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+}
+.img-card {
+  padding: 16px !important;
+}
+button {
+  box-sizing: border-box;
+  border: none;
+  background: var(--surface);
+  box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+  border-radius: 0;
+
+  min-width: 75px;
+  min-height: 23px;
+  padding: 0 12px;
+}
+
+.vertical-bar {
+  width: 4px;
+  height: 20px;
+  background: #c0c0c0;
+  box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+}
+:root {
+  /* Color */
+  --surface: #c0c0c0;
+  --button-highlight: #ffffff;
+  --button-face: #dfdfdf;
+  --button-shadow: #808080;
+  --window-frame: #0a0a0a;
+  --dialog-blue: #000080;
+  --dialog-blue-light: #1084d0;
+  --dialog-gray: #808080;
+  --dialog-gray-light: #b5b5b5;
+  --link-blue: #0000ff;
+
+  /* Spacing */
+  --element-spacing: 8px;
+  --grouped-button-spacing: 4px;
+  --grouped-element-spacing: 6px;
+  --radio-width: 12px;
+  --checkbox-width: 13px;
+  --radio-label-spacing: 6px;
+  --range-track-height: 4px;
+  --range-spacing: 10px;
+
+  /* Some detailed computations for radio buttons and checkboxes */
+  --radio-total-width-precalc: var(--radio-width) + var(--radio-label-spacing);
+  --radio-total-width: calc(var(--radio-total-width-precalc));
+  --radio-left: calc(-1 * var(--radio-total-width-precalc));
+  --radio-dot-width: 4px;
+  --radio-dot-top: calc(var(--radio-width) / 2 - var(--radio-dot-width) / 2);
+  --radio-dot-left: calc(
+    -1 * (var(--radio-total-width-precalc)) + var(--radio-width) / 2 - var(
+        --radio-dot-width
+      ) / 2
+  );
+
+  --checkbox-total-width-precalc: var(--checkbox-width) +
+    var(--radio-label-spacing);
+  --checkbox-total-width: calc(var(--checkbox-total-width-precalc));
+  --checkbox-left: calc(-1 * var(--checkbox-total-width-precalc));
+  --checkmark-width: 7px;
+  --checkmark-top: 3px;
+  --checkmark-left: 3px;
+
+  /* Borders */
+  --border-width: 1px;
+  --border-raised-outer: inset -1px -1px var(--window-frame),
+    inset 1px 1px var(--button-highlight);
+  --border-raised-inner: inset -2px -2px var(--button-shadow),
+    inset 2px 2px var(--button-face);
+  --border-sunken-outer: inset -1px -1px var(--button-highlight),
+    inset 1px 1px var(--window-frame);
+  --border-sunken-inner: inset -2px -2px var(--button-face),
+    inset 2px 2px var(--button-shadow);
+
+  /* Window borders flip button-face and button-highlight */
+  --border-window-outer: inset -1px -1px var(--window-frame),
+    inset 1px 1px var(--button-face);
+  --border-window-inner: inset -2px -2px var(--button-shadow),
+    inset 2px 2px var(--button-highlight);
+
+  /* Field borders (checkbox, input, etc) flip window-frame and button-shadow */
+  --border-field: inset -1px -1px var(--button-highlight),
+    inset 1px 1px var(--button-shadow), inset -2px -2px var(--button-face),
+    inset 2px 2px var(--window-frame);
+}
+button:not(:disabled):active {
+  box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
+  padding: 2px 11px 0 13px;
+}
+
+@media (not(hover)) {
+  button:not(:disabled):hover {
+    box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
+  }
+}
+
+button:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -4px;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+:disabled,
+:disabled + label {
+  color: var(--button-shadow);
+}
+
+button:disabled,
+:disabled + label {
+  text-shadow: 1px 1px 0 var(--button-highlight);
+}
+/* HAMBURGERS */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+/*
+   * Squeeze
+   */
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--squeeze .hamburger-inner::before {
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+.hamburger--squeeze .hamburger-inner::after {
+  transition: bottom 0.075s 0.12s ease,
+    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease,
+    transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* CAROUSEL */
+.thumb {
+  height: 80px;
+}
+.control-arrow {
+  box-shadow: none;
+  padding: 0 !important;
+}
+.carousel {
+  /* height: 24rem; */
+}
+.thumb img {
+  height: 80px;
+}
