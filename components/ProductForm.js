@@ -1,9 +1,16 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useCartContext, useAddToCartContext } from "@/context/Store";
 
-function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
+function ProductForm({
+  title,
+  handle,
+  variants,
+  setVariantPrice,
+  mainImg,
+  sale,
+}) {
   const [quantity, setQuantity] = useState(1);
   const [variantId, setVariantId] = useState(variants[0].node.id);
   const [variant, setVariant] = useState(variants[0]);
@@ -49,7 +56,7 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
       setQuantity(Math.floor(e));
     }
   }
-
+  console.log(variants);
   return (
     <div className="w-full">
       <div className="flex justify-start space-x-2 w-full">
@@ -64,7 +71,7 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
             step="1"
             value={quantity}
             onChange={(e) => updateQuantity(e.target.value)}
-            className="text-gray-900 form-input border border-gray-300 w-16 rounded-sm focus:border-palette-light focus:ring-palette-light"
+            className="text-gray-900 form-input border border-gray-300 w-16 rounded-sm focus:border-jbgray focus:ring-jbgray"
           />
         </div>
         <div className="flex flex-col items-start space-y-1 flex-grow">
@@ -74,7 +81,7 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
             name="size-selector"
             onChange={(event) => handleSizeChange(event.target.value)}
             value={variantId}
-            className="form-select border border-gray-300 rounded-sm w-full text-gray-900 focus:border-palette-light focus:ring-palette-light"
+            className="form-select border border-gray-300 rounded-sm w-full text-gray-900 focus:border-jbgray focus:ring-jbgray"
           >
             {variants.map((item) => (
               <option id={item.node.id} key={item.node.id} value={item.node.id}>
@@ -84,15 +91,17 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
           </select>
         </div>
       </div>
-      <button
-        // className={atcBtnStyle}
-        className="px-4 py-2 mt-4 w-full"
-        aria-label="cart-button"
-        onClick={handleAddToCart}
-      >
-        Add to Box
-        {/* <FontAwesomeIcon icon={faShoppingCart} className="w-5 ml-2" /> */}
-      </button>
+      {!sale && (
+        <button
+          // className={atcBtnStyle}
+          className="px-4 py-2 mt-4 w-full"
+          aria-label="cart-button"
+          onClick={handleAddToCart}
+        >
+          Add to Box
+          {/* <FontAwesomeIcon icon={faShoppingCart} className="w-5 ml-2" /> */}
+        </button>
+      )}
     </div>
   );
 }
