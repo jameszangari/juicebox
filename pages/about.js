@@ -1,6 +1,6 @@
 import StoreHeading from "@/components/StoreHeading";
 
-function About({ products }) {
+function About() {
   return (
     <div className="mx-auto max-w-6xl">
       <StoreHeading />
