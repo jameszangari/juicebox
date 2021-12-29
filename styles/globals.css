@@ -47,7 +47,7 @@
 }*/
 
 .xp-bg {
-  border: 2px solid;
+  border: 3px solid;
   border-bottom-color: #535353 !important;
   border-right-color: #535353 !important;
   border-left-color: #dbdbdb !important;
@@ -55,10 +55,10 @@
   background-color: #bfbfbf !important;
 }
 .xp-card {
-  border-top: solid 2px #dbdbdb;
-  border-left: solid 2px #dbdbdb;
-  border-right: solid 2px #535353;
-  border-bottom: solid 2px #535353;
+  border-top: solid 3px #dbdbdb;
+  border-left: solid 3px #dbdbdb;
+  border-right: solid 3px #535353;
+  border-bottom: solid 3px #535353;
   background: #bfbfbf;
 }
 /* .product-card-window {
@@ -129,7 +129,7 @@ button {
   background: var(--surface);
   box-shadow: var(--border-raised-outer), var(--border-raised-inner);
   border-radius: 0;
-
+  font-family: "Montserrat", sans-serif;
   min-width: 75px;
   min-height: 23px;
   padding: 0 12px;
@@ -185,25 +185,25 @@ button {
   --checkmark-left: 3px;
 
   /* Borders */
-  --border-width: 1px;
-  --border-raised-outer: inset -1px -1px var(--window-frame),
-    inset 1px 1px var(--button-highlight);
+  --border-width: 2px;
+  --border-raised-outer: inset -2px -2px var(--window-frame),
+    inset 2px 2px var(--button-highlight);
   --border-raised-inner: inset -2px -2px var(--button-shadow),
     inset 2px 2px var(--button-face);
-  --border-sunken-outer: inset -1px -1px var(--button-highlight),
-    inset 1px 1px var(--window-frame);
+  --border-sunken-outer: inset -2px -2px var(--button-highlight),
+    inset 2px 2px var(--window-frame);
   --border-sunken-inner: inset -2px -2px var(--button-face),
     inset 2px 2px var(--button-shadow);
 
   /* Window borders flip button-face and button-highlight */
-  --border-window-outer: inset -1px -1px var(--window-frame),
-    inset 1px 1px var(--button-face);
+  --border-window-outer: inset -2px -2px var(--window-frame),
+    inset 2px 2px var(--button-face);
   --border-window-inner: inset -2px -2px var(--button-shadow),
     inset 2px 2px var(--button-highlight);
 
   /* Field borders (checkbox, input, etc) flip window-frame and button-shadow */
-  --border-field: inset -1px -1px var(--button-highlight),
-    inset 1px 1px var(--button-shadow), inset -2px -2px var(--button-face),
+  --border-field: inset -2px -2px var(--button-highlight),
+    inset 2px 2px var(--button-shadow), inset -2px -2px var(--button-face),
     inset 2px 2px var(--window-frame);
 }
 button:not(:disabled):active {
@@ -218,7 +218,7 @@ button:not(:disabled):active {
 }
 
 button:focus {
-  outline: 1px dotted #000000;
+  outline: 2px dotted #000000;
   outline-offset: -4px;
 }
 
@@ -264,7 +264,7 @@ button:disabled,
 }
 
 .hamburger-box {
-  width: 40px;
+  width: 30px;
   height: 24px;
   display: inline-block;
   position: relative;
@@ -273,15 +273,15 @@ button:disabled,
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px;
+  margin-top: 0px;
 }
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-  width: 40px;
-  height: 4px;
+  width: 30px;
+  height: 3px;
   background-color: #000;
-  border-radius: 4px;
+  border-radius: 0;
   position: absolute;
   transition-property: transform;
   transition-duration: 0.15s;
@@ -293,10 +293,10 @@ button:disabled,
   display: block;
 }
 .hamburger-inner::before {
-  top: -10px;
+  top: -8px;
 }
 .hamburger-inner::after {
-  bottom: -10px;
+  bottom: -8px;
 }
 /*
    * Squeeze
