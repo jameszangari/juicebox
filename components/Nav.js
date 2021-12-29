@@ -46,17 +46,17 @@ function Nav() {
   return (
     <>
       <nav className="sticky top-0 z-20 xp-bg">
-        <div className="flex items-center justify-between w-full mx-auto px-6 py-4">
+        <div className="flex items-center justify-between w-full mx-auto px-6 py-2">
           {/* desktop menu */}
           <div className="md:flex hidden justify-start w-4/12">
             <Link href="/" passHref>
-              <button className="px-4 py-2">Home</button>
+              <button className="uppercase px-4 py-2">Home</button>
             </Link>
             <Link href="/shop" passHref>
-              <button className="px-4 py-2">Shop</button>
+              <button className="uppercase px-4 py-2">Shop</button>
             </Link>
             <Link href="/about" passHref>
-              <button className="px-4 py-2">About</button>
+              <button className="uppercase px-4 py-2">About</button>
             </Link>
           </div>
           {/* mobile menu */}
@@ -87,7 +87,7 @@ function Nav() {
           </div>
           {/* Cart */}
           <div className="flex justify-end w-4/12">
-            <p className="md:block hidden pr-4">100% ORIGINAL</p>
+            <p className="md:block hidden pr-4 font-primary">100% ORIGINAL</p>
             <Link href="/cart" passHref>
               <a className=" relative" aria-label="cart">
                 <Bag />
