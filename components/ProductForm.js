@@ -91,7 +91,7 @@ function ProductForm({
           </select>
         </div>
       </div>
-      {!sale && (
+      {sale && (
         <button
           // className={atcBtnStyle}
           className="px-4 py-2 mt-4 w-full"
