@@ -86,7 +86,7 @@ function Nav() {
             </Link>
           </div>
           {/* Cart */}
-          <div className="flex justify-end w-4/12">
+          <div className="flex justify-end w-4/12 items-center">
             <p className="md:block hidden pr-4 font-primary">100% ORIGINAL</p>
             <Link href="/cart" passHref>
               <a className=" relative" aria-label="cart">
