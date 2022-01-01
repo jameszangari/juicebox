@@ -15,14 +15,7 @@ function ProductCard({ product }) {
   const [quantity, setQuantity] = useState(1);
   const [variantId, setVariantId] = useState(variants.edges[0].node.id);
   const [variant, setVariant] = useState(variants.edges[0]);
-  const isLoading = useCartContext()[2];
   const addToCart = useAddToCartContext();
-
-  const atcBtnStyle = isLoading
-    ? `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex 
-                      justify-center items-baseline  hover:bg-palette-dark opacity-25 cursor-none`
-    : `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex 
-                      justify-center items-baseline  hover:bg-palette-dark`;
 
   function handleSizeChange(e) {
     setVariantId(e);
@@ -70,23 +63,21 @@ function ProductCard({ product }) {
               alt={imageNode.altText}
               className="img-card bg-white"
             />
+            {!sale && (
+              <div className="bg-jbpink text-white p-4 font-bold">
+                <p>Coming Soon</p>
+              </div>
+            )}
           </div>
-          {!sale && (
-            <div className="bg-jbpink text-white p-4 font-bold">
-              <p>Coming Soon</p>
-            </div>
-          )}
           {sale && (
             <div className="bg-white p-4 text-jbblue2">
               <Price currency="$" num={price} numSize="text-lg" />
               <button
-                // className={atcBtnStyle}
                 className="px-4 py-2 mt-4 w-full text-black"
                 aria-label="cart-button"
                 onClick={handleAddToCart}
               >
                 Add to Box
-                {/* <FontAwesomeIcon icon={faShoppingCart} className="w-5 ml-2" /> */}
               </button>
             </div>
           )}

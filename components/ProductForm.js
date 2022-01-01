@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useCartContext, useAddToCartContext } from "@/context/Store";
 
 function ProductForm({
@@ -14,14 +12,7 @@ function ProductForm({
   const [quantity, setQuantity] = useState(1);
   const [variantId, setVariantId] = useState(variants[0].node.id);
   const [variant, setVariant] = useState(variants[0]);
-  const isLoading = useCartContext()[2];
   const addToCart = useAddToCartContext();
-
-  const atcBtnStyle = isLoading
-    ? `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex 
-                      justify-center items-baseline  hover:bg-palette-dark opacity-25 cursor-none`
-    : `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex 
-                      justify-center items-baseline  hover:bg-palette-dark`;
 
   function handleSizeChange(e) {
     setVariantId(e);
@@ -56,7 +47,6 @@ function ProductForm({
       setQuantity(Math.floor(e));
     }
   }
-  console.log(variants);
   return (
     <div className="w-full">
       <div className="flex justify-start space-x-2 w-full">
@@ -93,13 +83,11 @@ function ProductForm({
       </div>
       {sale && (
         <button
-          // className={atcBtnStyle}
           className="px-4 py-2 mt-4 w-full"
           aria-label="cart-button"
           onClick={handleAddToCart}
         >
           Add to Box
-          {/* <FontAwesomeIcon icon={faShoppingCart} className="w-5 ml-2" /> */}
         </button>
       )}
     </div>

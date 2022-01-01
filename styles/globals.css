@@ -5,7 +5,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.triangle {
+.is-open {
+  overflow: hidden;
 }
 
 .triangle::before {
@@ -15,36 +16,8 @@
   top: 0;
   left: 0em;
   border: 1em solid transparent;
-  border-left-color: #ffffff;
+  border-left-color: #e9dfdf;
 }
-
-/*.xp-btn {
-  font-family: 'Montserrat' !important;
-  text-transform: uppercase;
-  border: 2px solid !important;
-  border-bottom-color: #444 !important;
-  border-right-color: #444 !important;
-  border-left-color: #a6a6a6 !important;
-  border-top-color: #a6a6a6 !important;
-  background-color: #bfbfbf !important;
-  color: #000 !important;
-  line-height: 1 !important;
-  padding: 10px !important;
-  /~ height: 15px !important; ~/
-  /~ width: 15px !important; ~/
-}*/
-
-/*.xp-button {
-  font-family: 'Montserrat', sans-serif;
-  cursor: pointer;
-  background: #c0c0c0;
-  box-shadow: inset -1px -1px 0 0 #0a0a0a, inset 1px 1px 0 0 #fff, inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #dfdfdf;
-  /~ box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde; ~/
-  padding: 0 6px 1px;
-  /~ font-size: 24px; ~/
-  /~ background: silver !important;
-  box-shadow: inset -1px -1px #0a0a0a !important,inset 1px 1px #fff !important,inset -2px -2px grey !important,inset 2px 2px #dfdfdf !important; ~/
-}*/
 
 .xp-bg {
   border: 3px solid;
@@ -61,13 +34,6 @@
   border-bottom: solid 3px #535353;
   background: #bfbfbf;
 }
-/* .product-card-window {
-  border-top: solid 3px #f0f0f0;
-  border-left: solid 3px #f0f0f0;
-  border-right: solid 3px #909090;
-  border-bottom: solid 3px #909090;
-  background: #c0c0be;
-} */
 .o-logo {
   width: 150px;
   height: 36px;
@@ -208,7 +174,7 @@ button {
 }
 button:not(:disabled):active {
   box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
-  padding: 2px 11px 0 13px;
+  /* padding: 2px 11px 0 13px; */
 }
 
 @media (not(hover)) {

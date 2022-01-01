@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { useUpdateCartQuantityContext } from "@/context/Store";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Price from "@/components/Price";
 import { getCartSubTotal } from "@/utils/helpers";
@@ -22,8 +20,7 @@ function CartTable({ cart }) {
 
   return (
     <div className="min-h-80 my-4 sm:my-8 mx-auto w-full">
-      {/* <div className="min-h-80 max-w-2xl my-4 sm:my-8 mx-auto w-full"> */}
-      <table className="mx-auto">
+      <table className="max-w-6xl mx-auto w-3/4">
         <thead>
           <tr className="uppercase text-xs sm:text-sm border-b border-jbgray">
             <th className="font-primary font-normal px-6 py-4">Product</th>
@@ -47,10 +44,9 @@ function CartTable({ cart }) {
                   height={64}
                   width={64}
                   className={`sm:inline-flex`}
-                  // className={`hidden sm:inline-flex`}
                 />
                 <Link passHref href={`/products/${item.productHandle}`}>
-                  <a className="pt-1 hover:text-palette-dark">
+                  <a className="pt-1 hover:text-jbblue2">
                     {item.productTitle}, {item.variantTitle}
                   </a>
                 </Link>
@@ -65,23 +61,24 @@ function CartTable({ cart }) {
                   step="1"
                   value={item.variantQuantity}
                   onChange={(e) => updateItem(item.variantId, e.target.value)}
-                  className="text-gray-900 form-input border border-gray-300 w-16 rounded-sm focus:border-palette-light focus:ring-palette-light"
+                  className="text-gray-900 form-input border border-gray-300 w-16 rounded-sm focus:border-jbgray focus:ring-jbgray"
                 />
               </td>
               <td className="font-primary text-base font-light px-4 sm:px-6 py-4 hidden sm:table-cell">
                 <Price currency="$" num={item.variantPrice} numSize="text-lg" />
               </td>
               <td className="font-primary font-medium px-4 sm:px-6 py-4">
-                <button
+                <a
                   aria-label="delete-item"
-                  className=""
+                  className="cursor-pointer hover:opacity-80 transition-all"
                   onClick={() => updateItem(item.variantId, 0)}
                 >
-                  <FontAwesomeIcon
-                    icon={faTimes}
-                    className="w-8 h-8 text-black"
+                  <img
+                    src="/images/recycle.ico"
+                    alt="remove"
+                    className="block m-auto"
                   />
-                </button>
+                </a>
               </td>
             </tr>
           ))}
