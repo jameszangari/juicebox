@@ -51,39 +51,40 @@ function ProductCard({ product }) {
     }
   }
   return (
-    <Link href={`/products/${handle}`} passHref>
-      <a className="w-3/4 mx-auto xp-card">
-        <div className="relative">
-          <div className="font-primary text-black text-2xl py-4 px-4">
+    <div className="w-3/4 mx-auto xp-card">
+      <div className="relative">
+        <div className="font-primary text-black text-2xl py-4 px-4">
+          <Link href={`/products/${handle}`} passHref>
             {title}
-          </div>
-          <div className="relative">
-            <img
-              src={imageNode.originalSrc}
-              alt={imageNode.altText}
-              className="img-card bg-white"
-            />
-            {!sale && (
-              <div className="bg-jbpink text-white p-4 font-bold">
-                <p>Coming Soon</p>
-              </div>
-            )}
-          </div>
-          {sale && (
-            <div className="bg-white p-4 text-jbblue2">
-              <Price currency="$" num={price} numSize="text-lg" />
-              <button
-                className="px-4 py-2 mt-4 w-full text-black"
-                aria-label="cart-button"
-                onClick={handleAddToCart}
-              >
-                Add to Box
-              </button>
+          </Link>
+        </div>
+
+        <div className="relative">
+          <img
+            src={imageNode.originalSrc}
+            alt={imageNode.altText}
+            className="img-card bg-white"
+          />
+          {!sale && (
+            <div className="bg-jbpink text-white p-4 font-bold">
+              <p>Coming Soon</p>
             </div>
           )}
         </div>
-      </a>
-    </Link>
+        {sale && (
+          <div className="bg-white p-4 text-jbblue2">
+            <Price currency="$" num={price} numSize="text-lg" />
+            <button
+              className="px-4 py-2 mt-4 w-full text-black"
+              aria-label="cart-button"
+              onClick={handleAddToCart}
+            >
+              Add to Box
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
