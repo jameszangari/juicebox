@@ -6,7 +6,7 @@ function About() {
   return (
     <div className="flex flex-col mx-auto max-w-6xl">
       <SEO title={pageTitle} />
-      <div className="w-3/6 flex justify-center m-auto">
+      <div className="md:w-3/6 w-5/6 flex justify-center m-auto">
         <img src="images/about.png" alt="" />
       </div>
       <div className="w-4/6 m-auto mt-16">
