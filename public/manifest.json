@@ -2,7 +2,7 @@
   "name": "juicebox.nyc",
   "short_name": "Age is just a number.",
   "theme_color": "#ffffff",
-  "background_color": "#E67A73",
+  "background_color": "#ff5b5b",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
@@ -33,8 +33,8 @@
       "purpose": "any maskable"
     },
     {
-      "src": "icons/icon-512x512.png",
-      "sizes": "512x512",
+      "src": "icons/icon-310x310.png",
+      "sizes": "310x310",
       "type": "image/png",
       "purpose": "any maskable"
     }

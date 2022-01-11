@@ -31,7 +31,7 @@ function CartTable({ cart }) {
             <th className="font-primary font-normal px-6 py-4">Remove</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-palette-lighter">
+        <tbody className="divide-y divide-jblightgray">
           {cartItems.map((item) => (
             <tr
               key={item.variantId}
@@ -88,7 +88,7 @@ function CartTable({ cart }) {
               <td className="font-primary text-base text-gray-600 font-semibold uppercase px-4 sm:px-6 py-4">
                 Subtotal
               </td>
-              <td className="font-primary text-lg text-palette-primary font-medium px-4 sm:px-6 py-4">
+              <td className="font-primary text-lg text-jbblue font-medium px-4 sm:px-6 py-4">
                 <Price currency="$" num={subtotal} numSize="text-xl" />
               </td>
               <td></td>

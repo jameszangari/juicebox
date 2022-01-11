@@ -50,13 +50,13 @@ function Nav() {
           {/* desktop menu */}
           <div className="md:flex hidden justify-start w-4/12">
             <Link href="/" passHref>
-              <button className="uppercase px-4 py-2">Home</button>
+              <button className="text-sm uppercase main-button">Home</button>
             </Link>
             <Link href="/shop" passHref>
-              <button className="uppercase px-4 py-2">Shop</button>
+              <button className="text-sm uppercase main-button">Shop</button>
             </Link>
             <Link href="/about" passHref>
-              <button className="uppercase px-4 py-2">About</button>
+              <button className="text-sm uppercase main-button">About</button>
             </Link>
           </div>
           {/* mobile menu */}
@@ -92,7 +92,7 @@ function Nav() {
               <a className=" relative" aria-label="cart">
                 <Bag />
                 {cartItems === 0 ? null : (
-                  <span className="absolute top-0 right-0 text-xs bg-black text-white font-semibold rounded-full h-6 w-6 py-1 px-2 transform translate-x-5 -translate-y-3">
+                  <span className="absolute top-0 right-0 text-xs bg-jbblue text-black font-semibold rounded-full h-6 w-6 transform translate-x-4 -translate-y-2 leading-6 text-center">
                     {cartItems}
                   </span>
                 )}

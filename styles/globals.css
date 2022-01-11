@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+.main-button {
+  padding: 6px 24px;
+}
+
 .triangle::before {
   content: "";
   height: 100%;
@@ -21,19 +25,48 @@
 
 .xp-bg {
   border: 3px solid;
-  border-bottom-color: #535353 !important;
-  border-right-color: #535353 !important;
-  border-left-color: #dbdbdb !important;
-  border-top-color: #dbdbdb !important;
-  background-color: #bfbfbf !important;
+  border-bottom-color: #6a6a6a !important;
+  border-right-color: #6a6a6a !important;
+  border-left-color: #e8e8e8 !important;
+  border-top-color: #e8e8e8 !important;
+  background-color: #c0c0c0 !important;
 }
 .xp-card {
-  border-top: solid 3px #dbdbdb;
-  border-left: solid 3px #dbdbdb;
-  border-right: solid 3px #535353;
-  border-bottom: solid 3px #535353;
-  background: #bfbfbf;
+  border-top: solid 3px #e8e8e8;
+  border-left: solid 3px #e8e8e8;
+  border-right: solid 3px #6a6a6a;
+  border-bottom: solid 3px #6a6a6a;
+  background: #c0c0c0;
 }
+.xp-window {
+  /* border-top: solid 3px #e8e8e8;
+  border-left: solid 3px #e8e8e8;
+  border-right: solid 3px #6a6a6a;
+  border-bottom: solid 3px #6a6a6a;
+  background: #c0c0c0; */
+  border: 6px solid #c0c0c0;
+}
+.xp-window-inner {
+  border-bottom: solid 3px #e8e8e8;
+  border-right: solid 3px #e8e8e8;
+  border-left: solid 3px #6a6a6a;
+  border-top: solid 3px #6a6a6a;
+  background: #c0c0c0;
+}
+/* .xp-image {
+  border-top: solid 3px #c0c0c0;
+  border-left: solid 3px #c0c0c0;
+  border-right: solid 3px #c0c0c0;
+  border-bottom: solid 3px #c0c0c0;
+  background: #c0c0c0;
+} */
+/* .xp-image {
+  border-top: solid 3px #e8e8e8;
+  border-left: solid 3px #e8e8e8;
+  border-right: solid 3px #6a6a6a;
+  border-bottom: solid 3px #6a6a6a;
+  background: #c0c0c0;
+} */
 .o-logo {
   width: 150px;
   height: 36px;
@@ -70,9 +103,9 @@
     flex-direction: column;
     justify-content: center;
   }
-  .typewriter__left h1 {
+  /* .typewriter__left h1 {
     font-size: 36px;
-  }
+  } */
   .typewriter__right {
     margin-top: 50px;
   }
@@ -84,7 +117,7 @@
 }
 .typewriter__leftType {
   font-family: "Montserrat", sans-serif;
-  font-size: 28px;
+  /* font-size: 28px; */
 }
 .img-card {
   padding: 16px !important;
@@ -110,10 +143,14 @@ button {
 :root {
   /* Color */
   --surface: #c0c0c0;
-  --button-highlight: #ffffff;
-  --button-face: #dfdfdf;
-  --button-shadow: #808080;
-  --window-frame: #0a0a0a;
+  --button-highlight: #e8e8e8;
+  /* --button-highlight: #ffffff; */
+  --button-face: #c0c0c0;
+  /* --button-face: #dfdfdf; */
+  --button-shadow: #6a6a6a;
+  /* --button-shadow: #808080; */
+  --window-frame: #353535;
+  /* --window-frame: #0a0a0a; */
   --dialog-blue: #000080;
   --dialog-blue-light: #1084d0;
   --dialog-gray: #808080;
@@ -245,9 +282,9 @@ button:disabled,
 .hamburger-inner::before,
 .hamburger-inner::after {
   width: 30px;
-  height: 3px;
+  height: 4px;
   background-color: #000;
-  border-radius: 0;
+  border-radius: 6px;
   position: absolute;
   transition-property: transform;
   transition-duration: 0.15s;
@@ -259,10 +296,10 @@ button:disabled,
   display: block;
 }
 .hamburger-inner::before {
-  top: -8px;
+  top: -10px;
 }
 .hamburger-inner::after {
-  bottom: -8px;
+  bottom: -10px;
 }
 /*
    * Squeeze
