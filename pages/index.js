@@ -1,12 +1,11 @@
 import Typewriter from "typewriter-effect";
 import Link from "next/dist/client/link";
 
-function IndexPage({ products }) {
+function IndexPage() {
   return (
     <div className="typewriter">
       <div className="typewriter__left">
         <h1 className="md:text-4xl text-3xl">Age is just a number</h1>
-        {/* <h3 className=''></h3> */}
         <Typewriter
           options={{
             strings: ["You're never too old for a juicebox."],
