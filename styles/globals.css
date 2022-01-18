@@ -12,7 +12,9 @@
 .main-button {
   padding: 6px 24px;
 }
-
+span[type="button"] {
+  -webkit-appearance: none !important;
+}
 .triangle::before {
   content: "";
   height: 100%;
