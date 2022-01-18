@@ -13,13 +13,12 @@ function ProductForm({
   const [variantId, setVariantId] = useState(variants[0].node.id);
   const [variant, setVariant] = useState(variants[0]);
   const addToCart = useAddToCartContext();
-  console.log(variant);
+
   function handleSizeChange(e) {
     setVariantId(e);
     // send back size change
     const selectedVariant = variants.filter((v) => v.node.id === e).pop();
     setVariantPrice(selectedVariant.node.price);
-
     // update variant
     setVariant(selectedVariant);
   }

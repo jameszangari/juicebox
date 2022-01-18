@@ -25,6 +25,7 @@ function ProductImage({ images }) {
         showStatus={false}
         showThumbs={true}
         transitionTime={500}
+        showIndicators={false}
         // className="relative h-96"
       >
         {images.map((image) => (

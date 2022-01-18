@@ -8,7 +8,7 @@ import { useCartContext } from "@/context/Store";
 function CartPage() {
   const pageTitle = `box | ${process.env.siteTitle}`;
   const [cart, checkoutUrl] = useCartContext();
-  console.log(cart);
+  // console.log(cart);
   return (
     <div className="container mx-auto mb-20 min-h-screen">
       <SEO title={pageTitle} />

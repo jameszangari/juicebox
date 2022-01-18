@@ -102,27 +102,31 @@ function Nav() {
         </div>
       </nav>
       {toggleMenu && (
-        <div className="absolute flex flex-col justify-center items-center z-10 w-full h-full bg-jbgray">
+        <div className="flex flex-row justify-start items-center z-10 w-full bg-jbgray">
+          {/* <div className="absolute flex flex-row justify-center items-center z-10 w-full h-full bg-jbgray mt-[-58px]"> */}
           <Link href="/" passHref>
-            <a
-              className="text-xl pb-8 hover:underline"
+            <button
               onClick={toggleMenuState}
+              className="text-sm uppercase main-button"
             >
               Home
-            </a>
+            </button>
           </Link>
           <Link href="/shop" passHref>
-            <a
-              className="text-xl pb-8 hover:underline"
+            <button
               onClick={toggleMenuState}
+              className="text-sm uppercase main-button"
             >
               Shop
-            </a>
+            </button>
           </Link>
           <Link href="/about" passHref>
-            <a className="text-xl hover:underline" onClick={toggleMenuState}>
+            <button
+              onClick={toggleMenuState}
+              className="text-sm uppercase main-button"
+            >
               About
-            </a>
+            </button>
           </Link>
         </div>
       )}
