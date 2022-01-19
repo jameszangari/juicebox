@@ -1,8 +1,8 @@
 {
   "name": "juicebox.nyc",
   "short_name": "Age is just a number.",
-  "theme_color": "#ffffff",
-  "background_color": "#ff5b5b",
+  "theme_color": "#F5F3FF",
+  "background_color": "#c0c0c0",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
