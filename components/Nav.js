@@ -18,27 +18,27 @@ function Nav() {
 
   const [toggleMenu, setToggleMenu] = useState(null);
 
-  const disableScroll = () => {
-    document.querySelectorAll("html").forEach((node) => {
-      node.classList.add("is-open");
-    });
-  };
+  // const disableScroll = () => {
+  //   document.querySelectorAll("html").forEach((node) => {
+  //     node.classList.add("is-open");
+  //   });
+  // };
 
-  const enableScroll = () => {
-    document.querySelectorAll("html").forEach((node) => {
-      node.classList.remove("is-open");
-    });
-  };
+  // const enableScroll = () => {
+  //   document.querySelectorAll("html").forEach((node) => {
+  //     node.classList.remove("is-open");
+  //   });
+  // };
 
   function toggleMenuState(e) {
     setToggleMenu((toggle) => {
       const newState = !toggle;
 
-      if (newState) {
-        disableScroll();
-      } else {
-        enableScroll();
-      }
+      // if (newState) {
+      //   disableScroll();
+      // } else {
+      //   enableScroll();
+      // }
 
       return newState;
     });
@@ -100,36 +100,36 @@ function Nav() {
             </Link>
           </div>
         </div>
+        {toggleMenu && (
+          <div className="sticky top-[60px] flex flex-row justify-start items-center z-10 w-full mx-4 my-2">
+            {/* <div className="absolute flex flex-row justify-center items-center z-10 w-full h-full bg-jbgray mt-[-58px]"> */}
+            <Link href="/" passHref>
+              <button
+                onClick={toggleMenuState}
+                className="text-sm uppercase main-button"
+              >
+                Home
+              </button>
+            </Link>
+            <Link href="/shop" passHref>
+              <button
+                onClick={toggleMenuState}
+                className="text-sm uppercase main-button"
+              >
+                Shop
+              </button>
+            </Link>
+            <Link href="/about" passHref>
+              <button
+                onClick={toggleMenuState}
+                className="text-sm uppercase main-button"
+              >
+                About
+              </button>
+            </Link>
+          </div>
+        )}
       </nav>
-      {toggleMenu && (
-        <div className="flex flex-row justify-start items-center z-10 w-full bg-jbgray">
-          {/* <div className="absolute flex flex-row justify-center items-center z-10 w-full h-full bg-jbgray mt-[-58px]"> */}
-          <Link href="/" passHref>
-            <button
-              onClick={toggleMenuState}
-              className="text-sm uppercase main-button"
-            >
-              Home
-            </button>
-          </Link>
-          <Link href="/shop" passHref>
-            <button
-              onClick={toggleMenuState}
-              className="text-sm uppercase main-button"
-            >
-              Shop
-            </button>
-          </Link>
-          <Link href="/about" passHref>
-            <button
-              onClick={toggleMenuState}
-              className="text-sm uppercase main-button"
-            >
-              About
-            </button>
-          </Link>
-        </div>
-      )}
     </>
   );
 }

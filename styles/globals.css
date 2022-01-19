@@ -5,10 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.is-open {
-  overflow: hidden;
-}
-
 .main-button {
   padding: 6px 24px;
 }
@@ -45,19 +41,11 @@ span[type="button"] {
   border-bottom: solid 3px #6a6a6a;
   background: #c0c0c0;
 }
-.xp-window {
-  /* border-top: solid 3px #e8e8e8;
-  border-left: solid 3px #e8e8e8;
-  border-right: solid 3px #6a6a6a;
-  border-bottom: solid 3px #6a6a6a;
-  background: #c0c0c0; */
-  border: 6px solid #c0c0c0;
-}
 .xp-window-inner {
-  border-bottom: solid 3px #e8e8e8;
-  border-right: solid 3px #e8e8e8;
-  border-left: solid 3px #6a6a6a;
   border-top: solid 3px #6a6a6a;
+  border-left: solid 3px #6a6a6a;
+  border-right: solid 3px #e8e8e8;
+  border-bottom: solid 3px #e8e8e8;
   background: #c0c0c0;
 }
 /* .xp-image {
