@@ -1,54 +1,3 @@
-# Next.js + Tailwind CSS + Shopify Starter
-
-<div align="center">
-<img src="https://github.com/btahir/next-shopify-starter/blob/main/public/images/demo-store.gif">
-<p align="center">
-  <a href="https://doggystickers.xyz/">Live Demo</a> •
-  <a href="https://nextails.com/">See more starters</a> •
-  <a href="https://twitter.com/deepwhitman">Follow me on Twitter</a>
-</p>
-</div>
-
-This is a fully functional eCommerce store that uses Next.js + Tailwind CSS in the front end and leverages the Shopify Storefront API to interact with your Shopify backend. You can see a Live Demo [here](https://doggystickers.xyz/ "Shopify store").
-
-We use GraphQL to query our Shopify data and store the cart information in localStorage to persist user session. Finally - we use Shopify Checkout to let the user
-purchase the items. You can see this play out in the example store. Yes - the store is functional and you can buy the stickers. :smiley:
-
-## High Performance
-
-<table align="center">
-  <thead>
-    <tr>
-      <td>Desktop</td>
-      <td>Mobile</td>
-    <tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td valign="top"><img width="300" height="300" src="https://github.com/btahir/next-shopify-starter/blob/main/public/images/desktop-lighthouse.png"/></td>
-    <td valign="top"><img width="300" height="300" src="https://github.com/btahir/next-shopify-starter/blob/main/public/images/mobile-lighthouse.png"/></td>
-  </tr>
-  </tbody>
-</table>
-
-## Mobile Responsive
-
-<table align="center">
-  <thead>
-    <tr>
-      <td>Listings</td>
-      <td>Cart</td>
-    <tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td valign="top"><img width="300" height="300" src="https://github.com/btahir/next-shopify-starter/blob/main/public/images/responsive-main.gif"/></td>
-    <td valign="top"><img width="300" height="300" src="https://github.com/btahir/next-shopify-starter/blob/main/public/images/responsive-cart.gif"/></td>
-  </tr>
-  </tbody>
-</table>
-
-
 ## The Tech
 
 * Next.js + Tailwind CSS
@@ -56,8 +5,6 @@ purchase the items. You can see this play out in the example store. Yes - the st
 * localStorage to persist user session
 * Shopify
 * Vercel
-* Font Awesome Icons
-* Josefin Sans Google Font
 
 ## How to use
 
@@ -136,19 +83,3 @@ You can use free tools online such as https://realfavicongenerator.net/ to quick
 ### Deployment
 
 You can deploy this using any number of services. Vercel and Netlify are the ones I prefer and very easy to setup and sync with your Github repo.
-
-### Credit
-
-The store was inspired by the awesome [Gatsby Swag Store](https://github.com/gatsbyjs/store.gatsbyjs.org "gatsby store") as well
-as countless other devs much more capable than me who put out their awesome work for free. 
-
-### License
-
-I have open sourced this code under the MIT License in the hope that if this helps people navigate their way around JAMStack eCommerce stores
-as the Gatsby Swag Store did for me when I first started out.
-
-### Buy Me Coffee! :coffee:
-
-If you did find this useful and want to show your appreciation you can buy me a [coffee](https://www.buymeacoffee.com/neum "coffee") :smiley:
-
-You can also buy some Doggy Stickers from the [store](https://doggystickers.xyz/ "store")! :dog:
