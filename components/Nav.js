@@ -48,7 +48,7 @@ function Nav() {
       <nav className="sticky top-0 z-20 xp-bg">
         <div className="flex items-center justify-between w-full mx-auto px-6 py-2">
           {/* desktop menu */}
-          <div className="md:flex hidden justify-start w-4/12">
+          <div className="lg:flex hidden justify-start w-4/12">
             <Link href="/" passHref>
               <button className="text-sm uppercase main-button">Home</button>
             </Link>
@@ -60,7 +60,7 @@ function Nav() {
             </Link>
           </div>
           {/* mobile menu */}
-          <div className="md:hidden w-4/12">
+          <div className="lg:hidden w-4/12">
             <span
               className={
                 toggleMenu
@@ -101,12 +101,12 @@ function Nav() {
           </div>
         </div>
         {toggleMenu && (
-          <div className="sticky top-[60px] flex flex-row justify-start items-center z-10 w-full mx-4 my-2">
+          <div className="sticky flex flex-col items-start z-10 mx-4 my-2">
             {/* <div className="absolute flex flex-row justify-center items-center z-10 w-full h-full bg-jbgray mt-[-58px]"> */}
             <Link href="/" passHref>
               <button
                 onClick={toggleMenuState}
-                className="text-sm uppercase main-button"
+                className="text-sm uppercase main-button w-48"
               >
                 Home
               </button>
@@ -114,7 +114,7 @@ function Nav() {
             <Link href="/shop" passHref>
               <button
                 onClick={toggleMenuState}
-                className="text-sm uppercase main-button"
+                className="text-sm uppercase main-button w-48"
               >
                 Shop
               </button>
@@ -122,7 +122,7 @@ function Nav() {
             <Link href="/about" passHref>
               <button
                 onClick={toggleMenuState}
-                className="text-sm uppercase main-button"
+                className="text-sm uppercase main-button w-48"
               >
                 About
               </button>
