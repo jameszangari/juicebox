@@ -36,8 +36,12 @@ function ProductCard({ product }) {
               )}
             </div>
             {sale && (
-              <div className="bg-white p-4 text-jbblue flex items-center justify-between">
-                <Price currency="$" num={price} numSize="text-lg text-jbblue" />
+              <div className="bg-white p-4 text-jbblue flex items-center justify-between w-full">
+                <Price
+                  currency="$"
+                  num={price}
+                  numSize="text-lg text-jbblue w-2/6"
+                />
                 <Link href={`/products/${handle}`} passHref>
                   <button
                     className="w-4/6 px-6 py-2 ml-4 text-black"
