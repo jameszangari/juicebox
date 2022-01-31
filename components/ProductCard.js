@@ -26,7 +26,7 @@ function ProductCard({ product }) {
                 <div className="bg-white p-4 flex items-center justify-between">
                   <p className="text-lg text-red-500">Out of Stock</p>
                   <button
-                    className="px-16 py-2 ml-4 text-black cursor-not-allowed whitespace-nowrap"
+                    className="w-4/6 px-6 py-2 ml-4 text-black cursor-not-allowed"
                     aria-label="cart-button"
                     disabled
                   >
@@ -40,7 +40,7 @@ function ProductCard({ product }) {
                 <Price currency="$" num={price} numSize="text-lg text-jbblue" />
                 <Link href={`/products/${handle}`} passHref>
                   <button
-                    className="px-16 py-2 ml-4 text-black whitespace-nowrap"
+                    className="w-4/6 px-6 py-2 ml-4 text-black"
                     aria-label="cart-button"
                   >
                     Add to Box
