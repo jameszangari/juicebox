@@ -12,48 +12,45 @@ function ProductCard({ product }) {
 
   return (
     <div className="w-5/6 mx-auto xp-card">
-      <div className="relative xp-window min-h-full mb-2">
-        <div className="font-primary text-black text-2xl p-2">
-          <Link href={`/products/${handle}`} passHref>
-            {title}
-          </Link>
-        </div>
-
-        <div className="xp-window-inner box-border min-h-full">
-          <div className="relative xp-image block min-h-full">
-            <img
-              src={imageNode.originalSrc}
-              alt={imageNode.altText}
-              className="img-card bg-white box-border"
-            />
-            {!sale && (
-              <div className="bg-white p-4 flex items-center justify-between">
-                <p className="text-lg text-red-500">Out of Stock</p>
-                <button
-                  className="px-16 py-2 ml-4 text-black cursor-not-allowed whitespace-nowrap"
-                  aria-label="cart-button"
-                  disabled
-                >
-                  Add to Box
-                </button>
+      <Link href={`/products/${handle}`} passHref>
+        <div className="relative xp-window min-h-full mb-2">
+          <h1 className="font-primary text-black text-2xl p-2">{title}</h1>
+          <div className="xp-window-inner box-border min-h-full">
+            <div className="relative xp-image block min-h-full">
+              <img
+                src={imageNode.originalSrc}
+                alt={imageNode.altText}
+                className="img-card bg-white box-border"
+              />
+              {!sale && (
+                <div className="bg-white p-4 flex items-center justify-between">
+                  <p className="text-lg text-red-500">Out of Stock</p>
+                  <button
+                    className="px-16 py-2 ml-4 text-black cursor-not-allowed whitespace-nowrap"
+                    aria-label="cart-button"
+                    disabled
+                  >
+                    Add to Box
+                  </button>
+                </div>
+              )}
+            </div>
+            {sale && (
+              <div className="bg-white p-4 text-jbblue flex items-center justify-between">
+                <Price currency="$" num={price} numSize="text-lg text-jbblue" />
+                <Link href={`/products/${handle}`} passHref>
+                  <button
+                    className="px-16 py-2 ml-4 text-black whitespace-nowrap"
+                    aria-label="cart-button"
+                  >
+                    Add to Box
+                  </button>
+                </Link>
               </div>
             )}
           </div>
-          {sale && (
-            <div className="bg-white p-4 text-jbblue flex items-center justify-between">
-              <Price currency="$" num={price} numSize="text-lg" />
-              <Link href={`/products/${handle}`} passHref>
-                <button
-                  className="px-16 py-2 ml-4 text-black whitespace-nowrap"
-                  aria-label="cart-button"
-                >
-                  Add to Box
-                </button>
-              </Link>
-            </div>
-          )}
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

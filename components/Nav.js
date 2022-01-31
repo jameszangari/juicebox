@@ -101,7 +101,7 @@ function Nav() {
           </div>
         </div>
         {toggleMenu && (
-          <div className="sticky flex flex-col items-start z-10 mx-4 my-2">
+          <div className="lg:hidden sticky flex flex-col items-start z-10 mx-4 my-2">
             {/* <div className="absolute flex flex-row justify-center items-center z-10 w-full h-full bg-jbgray mt-[-58px]"> */}
             <Link href="/" passHref>
               <button
