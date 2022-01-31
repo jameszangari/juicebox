@@ -24,9 +24,9 @@ function ProductCard({ product }) {
               />
               {!sale && (
                 <div className="bg-white p-4 flex items-center justify-between">
-                  <p className="text-lg text-red-500">Out of Stock</p>
+                  <p className="text-lg text-red-500 w-2/6">Out of Stock</p>
                   <button
-                    className="w-4/6 px-6 py-2 ml-4 text-black cursor-not-allowed"
+                    className="w-4/6 px-6 py-2 text-black cursor-not-allowed"
                     aria-label="cart-button"
                     disabled
                   >
@@ -37,14 +37,16 @@ function ProductCard({ product }) {
             </div>
             {sale && (
               <div className="bg-white p-4 text-jbblue flex items-center justify-between w-full">
-                <Price
-                  currency="$"
-                  num={price}
-                  numSize="text-lg text-jbblue w-2/6"
-                />
+                <div className="w-2/6">
+                  <Price
+                    currency="$"
+                    num={price}
+                    numSize="text-lg text-jbblue"
+                  />
+                </div>
                 <Link href={`/products/${handle}`} passHref>
                   <button
-                    className="w-4/6 px-6 py-2 ml-4 text-black"
+                    className="w-4/6 px-6 py-2 text-black"
                     aria-label="cart-button"
                   >
                     Add to Box
