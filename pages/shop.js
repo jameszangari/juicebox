@@ -14,7 +14,7 @@ export default function Shop({ products }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const products = await getAllProductsInCollection();
 
   return {
