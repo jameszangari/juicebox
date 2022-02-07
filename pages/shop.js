@@ -7,7 +7,6 @@ export default function Shop({ products }) {
 
   return (
     <div className="mx-auto max-w-6xl">
-      {/* <div className="mx-auto max-w-6xl"> */}
       <SEO title={pageTitle} />
       <ProductListings products={products} />
     </div>
