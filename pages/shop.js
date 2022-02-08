@@ -13,12 +13,13 @@ export default function Shop({ products }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const products = await getAllProductsInCollection();
 
   return {
     props: {
       products,
+      revalidate: 60,
     },
   };
 }
